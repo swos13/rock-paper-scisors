@@ -4,7 +4,7 @@ function getComputerChoice(){
 }
 
 function getPlayerChoice(){
-    let playerChoice = prompt("What is your choice (rock, paper or scissors?").toLowerCase();
+    let playerChoice = prompt("What is your choice (rock, paper or scissors?)").toLowerCase();
     while(playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors"){
         playerChoice = prompt("This is not correct! What is your choice (rock, paper or scissors)?").toLowerCase();
     }
