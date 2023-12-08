@@ -22,35 +22,3 @@ function playRound(computerChoice, playerChoice){
     else
         return 2;
 }
-
-function game(){
-    let computerScore = 0;
-    let computerChoice = '';
-    let playerScore = 0;
-    let playerChoice = '';
-    let result = -1;
-
-    while (playerScore < 3 && computerScore < 3){
-        computerChoice = getComputerChoice();
-        playerChoice = getPlayerChoice();
-        result = playRound(computerChoice, playerChoice);
-
-        if(result == 0)
-            console.log("It's a tie! Let's play this round again. ");
-        else if(result == 1){
-            console.log(`Sorry, but ${computerChoice} beats ${playerChoice}. You lost this round! `);
-            computerScore++;
-        }
-        else{
-            console.log(`${playerChoice} beats ${computerChoice}. You won this round!`);
-            playerScore++;
-        }
-        console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);
-    }
-    if(playerScore > computerScore)
-        console.log("Congratulations! You won the game!");
-    else
-        console.log("You lost the game! Too bad...");
-}
-
-game();
