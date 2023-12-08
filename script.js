@@ -14,11 +14,18 @@ function getPlayerChoice(){
 function playRound(computerChoice, playerChoice){
 
     if(computerChoice == playerChoice)
-        return 0;
+        console.log("It's a tie! Let's play this round again. ");
     else if((computerChoice == "rock" && playerChoice == "scissors") || 
     (computerChoice == "paper" && playerChoice == "rock") || 
     (computerChoice == "scissors" && playerChoice == "paper"))
-        return 1;
+        console.log(`Sorry, but ${computerChoice} beats ${playerChoice}. You lost this round! `);
     else
-        return 2;
+        console.log(`${playerChoice} beats ${computerChoice}. You won this round!`);
 }
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playRound(getComputerChoice(), button.value)})
+})
