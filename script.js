@@ -47,6 +47,7 @@ function endGame(){
     })
     let restartBtn = document.createElement('button');
     restartBtn.textContent = "Play again";
+    restartBtn.style.margin = '8px auto';
     body.appendChild(restartBtn);
 
     restartBtn.addEventListener('click', () => {
